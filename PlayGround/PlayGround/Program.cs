@@ -1,4 +1,4 @@
-﻿using Common;
+﻿using AnimalKindom;
 using LearningAbstractClass;
 using PlayGround;
 using System;
@@ -10,19 +10,32 @@ namespace PlayGround
     {
         public static void Main(string[] args)
         {
-            Student sushant = new();
-            var books = new List<Book> { new Book { Name = "Networks" }, new Book { Name = "E&TC" } };
-            sushant.ReadBooks(books);
-            sushant.BorrowBooks(books);
-            sushant.ReturnBooks(books);
+            Animal Kamdhenu = new Cow()
+            {
+                Color = "white",
+                Height = 4,
+                Weight = 200,
+            };
 
+            Kamdhenu.Sound();
 
-            Teacher MrMethew = new();
-            var booksForTeacher = new List<Book> { new Book { Name = "Networks" }, new Book { Name = "E&TC" } };
-            MrMethew.ReadBooks(booksForTeacher);
-            MrMethew.BorrowBooks(booksForTeacher);
-            MrMethew.ReturnBooks(booksForTeacher);
+            Animal Browny = new Cat()
+            {
+                Color = "Brown",
+                Height = 1,
+                Weight = 20,
+            };
 
+            Browny.Sound();
+
+            Animal Tiger = new Dog()
+            {
+                Color = "Black",
+                Height = 3,
+                Weight = 45,
+            };
+
+            Tiger.Sound();
         }
     }
 }
