@@ -12,7 +12,7 @@ namespace AnimalKindom
 
         public override void Sound()
         {
-            Console.Beep(800, 800);
+            Console.Beep(1200, 1200);
         }
     }
 }
