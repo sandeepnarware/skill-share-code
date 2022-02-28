@@ -13,6 +13,8 @@
     <ProjectReference Include="..\AnimalKindom\AnimalKindom.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\LearningAbstractClass\LearningAbstractClass.csproj" />
+    <ProjectReference Include="..\Notification\Notification.csproj" />
+    <ProjectReference Include="..\Polymorphism\Polymorphism.csproj" />
   </ItemGroup>
 
 </Project>
