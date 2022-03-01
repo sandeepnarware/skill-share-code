@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GroceryStorInventory.Model
 {
@@ -21,12 +19,15 @@ namespace GroceryStorInventory.Model
                 return;
             }
 
+            Console.WriteLine("*********************************************************************");
+            Console.WriteLine(Environment.NewLine);
+
             foreach (var inv in Inventories)
             {
-                Console.WriteLine($"SKU : {inv.Item.SKU}");
-                Console.WriteLine($"Name : {inv.Item.Name}");
-                Console.WriteLine($"Description : {inv.Item.Description}");
-                Console.WriteLine($"QOH : {inv.InvQty}");
+                Console.WriteLine($" SKU : {inv.Item.SKU}");
+                Console.WriteLine($" Name : {inv.Item.Name}");
+                Console.WriteLine($" Description : {inv.Item.Description}");
+                Console.WriteLine($" QOH : {inv.InvQty}");
                 Console.WriteLine(Environment.NewLine);
                 Console.WriteLine("*********************************************************************");
                 Console.WriteLine(Environment.NewLine);
