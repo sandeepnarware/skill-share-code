@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalKindom", "AnimalKindo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{B2CCD217-8D30-45E7-A555-04A310461BE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notification", "Notification\Notification.csproj", "{838944F4-D705-4381-B8EC-4046A527DA97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification", "Notification\Notification.csproj", "{838944F4-D705-4381-B8EC-4046A527DA97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gadget", "Gadget\Gadget.csproj", "{917FF6BF-5AB1-4B06-AD73-654E84F575E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadget", "Gadget\Gadget.csproj", "{917FF6BF-5AB1-4B06-AD73-654E84F575E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStorInventory", "GroceryStorInventory\GroceryStorInventory.csproj", "{48BD97BD-7ED3-45C2-9BD2-7634BCF7D03F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{917FF6BF-5AB1-4B06-AD73-654E84F575E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{917FF6BF-5AB1-4B06-AD73-654E84F575E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{917FF6BF-5AB1-4B06-AD73-654E84F575E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BD97BD-7ED3-45C2-9BD2-7634BCF7D03F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BD97BD-7ED3-45C2-9BD2-7634BCF7D03F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BD97BD-7ED3-45C2-9BD2-7634BCF7D03F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BD97BD-7ED3-45C2-9BD2-7634BCF7D03F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
