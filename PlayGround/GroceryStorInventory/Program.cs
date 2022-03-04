@@ -33,11 +33,28 @@ namespace GroceryStorInventory
                     case "A":
                         AddItemToStore(myStore);
                         break;
+                    case "D":
+                        DeleteItemFromStore(myStore);
+                        break;
+                    case "S":
+                        SellItem(myStore);
+                        break;
                     default:
                         break;
                 }
             } while (shouldContinue);
 
+        }
+
+        private static void SellItem(Store myStore)
+        {
+            Console.WriteLine("Plasese Provide SKU to Sell :");
+            var sku = Console.ReadLine();
+            var inv = myStore.GetInventory(sku);
+            Console.WriteLine(myStore.ShowInventory(inv));
+            Console.WriteLine("Please Provide Qty For Sell : ");
+            var sellQty = Convert.ToInt32(Console.ReadLine());
+            myStore.Sell(inv, sellQty);
         }
 
         private static Store InitializeStore()
@@ -74,6 +91,13 @@ namespace GroceryStorInventory
                     UnitPrice = unitPrice
                 }
             });
+        }
+
+        private static void DeleteItemFromStore(Store mystore)
+        {
+            Console.WriteLine("Please Provide SKU To Delete Item :");
+            var sku = Console.ReadLine();
+            mystore.DeleletItem(sku);
         }
     }
 }

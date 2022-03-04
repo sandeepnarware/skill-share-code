@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace GroceryStorInventory.Model
 {
@@ -36,22 +37,57 @@ namespace GroceryStorInventory.Model
 
         public void AddItem(Inventory itemDetails)
         {
-            if (Inventories == null)
-                Inventories = new List<Inventory>();
-
+            CheckIfInventoyExistElseCreate();
             Inventories.Add(itemDetails);
         }
 
-        public void DeleletItem(Inventory itemDetails)
+        private void CheckIfInventoyExistElseCreate()
         {
-            if (Inventories == null)
-                Inventories = new List<Inventory>();
+            Inventories = Inventories != null ? Inventories : new List<Inventory>();
+        }
 
-            var inv = Inventories.FirstOrDefault(inv => inv.Item.SKU == itemDetails.Item.SKU);
+        public string DeleletItem(Inventory itemDetails)
+        {
+            CheckIfInventoyExistElseCreate();
+            return DeleletItem(itemDetails.Item?.SKU);
+        }
+
+        public string DeleletItem(string sku)
+        {
+            CheckIfInventoyExistElseCreate();
+
+            var inv = Inventories.FirstOrDefault(inv => inv.Item.SKU == sku);
             if (inv == null)
-                Console.WriteLine($"Error : There is not item with SKU {itemDetails.Item.SKU}");
+                return $"Error : There is not item with SKU {sku}";
             else
                 Inventories.Remove(inv);
+
+            return "Item Deleted Sucessfuliy";
+        }
+
+        public string Sell(Inventory inv, int sellQty)
+        {
+            if (sellQty > inv.InvQty)
+                return "There is not sufficient Qty Avilable :(";
+            else
+                inv.InvQty -= sellQty;
+            return "Item Sold Sucessfully";
+
+        }
+
+        public string ShowInventory(Inventory inv)
+        {
+            StringBuilder output = new StringBuilder();
+            output.AppendLine($"Item SKU : {inv.Item.SKU}");
+            output.AppendLine($"Item Name : {inv.Item.Name}");
+            output.AppendLine($"Item Qty On Hand : {inv.InvQty}");
+            return output.ToString();
+        }
+
+        public Inventory GetInventory(string sku)
+        {
+            CheckIfInventoyExistElseCreate();
+            return Inventories.FirstOrDefault(inv => inv.Item.SKU == sku);
         }
     }
 }
